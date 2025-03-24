@@ -1,0 +1,46 @@
+{
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "tsconfigRootDir": "__dirname",
+  },
+  "include": [
+    "src",
+    "vite-env.d.ts"
+  ],
+  "exclude": [
+    ".dist/",
+    "node_modules",
+    "node_modules/**/*"
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact",
+    "paths": {
+      "react": [
+        "./node_modules/preact/compat/"
+      ],
+      "react-dom": [
+        "./node_modules/preact/compat/"
+      ],
+      "@/*": [
+        "./src/*"
+      ]
+    }
+  }
+}
