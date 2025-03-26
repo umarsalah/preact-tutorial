@@ -2,12 +2,12 @@ import { useQuery } from 'react-query';
 import { useState, useEffect } from 'preact/compat';
 
 import { useAuth } from '@/hooks/useAuth';
+import useDebounce from '@/hooks/useDebounce';
 import SearchBar from '@/components/search';
 import getTodos from '@/apis/todos/getTodos';
 
 import { Todo } from './components/todo';
 import "./index.scss";
-import useDebounce from '@/hooks/useDebounce';
 
 const fetchTodos = async (search = '', signal?: AbortSignal) => {
     try {

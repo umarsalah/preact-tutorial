@@ -1,4 +1,4 @@
-export default function Profile({userId}: {userId: string}) {
+export default function Profile({ userId }: { userId: string }) {
     return (
         <div>
             <h1>Profile</h1>
