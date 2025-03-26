@@ -1,9 +1,9 @@
 const { VITE_API_URL: apiUrl } = import.meta.env;
 
 
-const getTodos = async () => {
+const getTodos = async (signal: AbortSignal | undefined = undefined) => {
     try {
-        const response = await fetch(`${apiUrl}/todos`);
+        const response = await fetch(`${apiUrl}/todos`, { signal });
         if (!response.ok) {
             throw new Error(`Failed to fetch Todos: ${response.statusText}`);
         }
