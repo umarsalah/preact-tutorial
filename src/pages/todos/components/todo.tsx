@@ -14,6 +14,7 @@ export const Todo = ({ id, title, completed }) => {
             id={id}
             checked={isCompleted}
             onChange={onChange}
+            className='todo-item'
         >
             {title}
         </Checkbox >

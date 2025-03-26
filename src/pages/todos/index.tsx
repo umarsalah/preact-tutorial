@@ -36,8 +36,6 @@ const Todos = () => {
     const [search, setSearch] = useState('');
     const [debouncedSearch, abortController] = useDebounce(search, 500);
 
-    setToken('token');
-
     if (!token) {
         return <div>Unauthorized</div>
     }
